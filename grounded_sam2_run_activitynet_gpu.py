@@ -47,7 +47,7 @@ import psutil
 
 
 
-device = "cuda:1"
+device = "cuda:1"  #change your gpuid
 # Load the spaCy model for NER
 nlp = spacy.load("en_core_web_sm")
 
@@ -83,7 +83,7 @@ def process_videos(base_video_dir, output_dir, qa_json_path, sam2_checkpoint, mo
     processor = AutoProcessor.from_pretrained(grounding_model_id)
     grounding_model = AutoModelForZeroShotObjectDetection.from_pretrained(grounding_model_id).to(device)
     
-    exclusions = load_label_exclusions("/home/hanjiale/wzx/datasets/ActivityNet/allname.txt")
+    exclusions = load_label_exclusions("/home/hanjiale/wzx/datasets/ActivityNet/allname.txt")  #this is what you have delt, please change
     print(f'exclusions:{exclusions}')
 
     # List all video folders in the base directory
@@ -277,6 +277,7 @@ def process_videos(base_video_dir, output_dir, qa_json_path, sam2_checkpoint, mo
 
 # Example usage
 if __name__ == "__main__":
+    ##change your path files
     base_video_dir = "/home/hanjiale/wzx/datasets/ActivityNet/Activitynet_Zero_Shot_QA/Activitynet_Zero_Shot_QA/frames"
     output_dir = "/home/hanjiale/wzx/datasets/ActivityNet/sam2_addmaskblack_withoutlabel_result"
     qa_json_path = "/home/hanjiale/wzx/datasets/ActivityNet/Activitynet_Zero_Shot_QA/Activitynet_Zero_Shot_QA/test_q.json"
