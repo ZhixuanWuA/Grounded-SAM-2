@@ -280,7 +280,7 @@ if __name__ == "__main__":
     ##change your path files
     base_video_dir = "/home/hanjiale/wzx/datasets/ActivityNet/Activitynet_Zero_Shot_QA/Activitynet_Zero_Shot_QA/frames"
     output_dir = "/home/hanjiale/wzx/datasets/ActivityNet/sam2_addmaskblack_withoutlabel_result"
-    qa_json_path = "/home/hanjiale/wzx/datasets/ActivityNet/Activitynet_Zero_Shot_QA/Activitynet_Zero_Shot_QA/test_q.json"
+    qa_json_path = "/annonations/Activitynet_Zero_Shot_QA/test_q.json"
     sam2_checkpoint = "/home/hanjiale/wzx/LM/sam2.1_hiera_large.pt"
     model_cfg = "configs/sam2.1/sam2.1_hiera_l.yaml"
     grounding_model_id = "/home/hanjiale/wzx/LM/grounding-dino-tiny"
